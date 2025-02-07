@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .background-img {
+            position: fixed;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the screen */
+            z-index: -1; /* Sends the image to the background */
+    }
+    .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Adjust color for visibility */
+    min-height: 97vh; /* Full height to center vertically */
+    }
+    h1 button{
+        font-size: 21px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border-radius: 5px;
+        color: white;
+        background-color: black;
+        border-radius: 5px;
+        padding: 4px;
+        padding-left: 51px;
+        padding-right: 51px;
+        cursor: pointer;
+        margin-bottom: -5px; /* Adjust this value as needed */
+    }
+    h1 button:hover {
+        background-color: white;
+        color: black;
+    }
+    audio{
+        filter: invert(1);
+    }
+    </style>
+</head>
+<body>
+    <img src="Instrumental_1.jpg" alt="Background" class="background-img">
+    <div class="container">
+        <h1>
+            <button onclick="playAudio()">bipbipbupbup</button>
+        </h1>
+        <audio id="myAudio" controls>
+            <source src="bipbipbupbup148.wav" type="audio/wav">
+          </audio>
+    </div>
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+</html>
