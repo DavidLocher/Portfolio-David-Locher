@@ -45,9 +45,9 @@
         /* Make the video cover the entire screen */
         .video-container video {
             position: absolute;
-            top: 50%;
+            top: 30%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) scale(1.4);
             width: 100vw;
             height: 100vh;
             object-fit: cover; /* Ensures it covers the screen */
@@ -74,12 +74,12 @@
             background-color: red;
         color: black;
     }
-        .beats {
-      display: grid;
-      gap: 8px; /* Space between buttons */
-      justify-content: start; /* Aligns buttons to the left */
-      padding-left: 20px; /* Optional: Adds space from the left edge */
-      padding-top: 310px;
+    .beats {
+            position: absolute;
+            top: 290px; /* Adjust to move independently */
+            left: 26px;
+            display: grid;
+            gap: 8px;
     }
     .beats p {
         color: white;
@@ -104,10 +104,11 @@
         color: black;
     }
     .tracks {
-      display: grid;
-      gap: 8px; /* Space between buttons */
-      justify-content: end; /* Aligns buttons to the right */
-      padding-right: 20px; /* Optional: Adds space from the right edge */
+            position: absolute;
+            top: 500px; /* Adjust to move independently */
+            right: 26px;
+            display: grid;
+            gap: 8px;
     }
     .tracks p{
         color: white;
@@ -140,7 +141,7 @@
 
     <div class="video-container">
         <video id="background-video" autoplay loop muted>
-            <source src="hintergrund_video.mp4" type="video/mp4">
+            <source src="hintergrund_video_sound_1.mp4" type="video/mp4">
         </video>
     </div>
     <div class="button-container">
@@ -149,15 +150,19 @@
 
 <div class="beats">
     <p>instrumentals</p>
-    <button onclick="openLink4()">sneakant</button>
     <button onclick="openLink5()">bipbipbupbup</button>
+    <button onclick="openLink4()">sneakant</button>
+    <button onclick="openLink8()">worrie2</button>
+    <button onclick="openLink7()">angeldemaria</button>
     <button onclick="openLink6()">maschin</button>
+
 </div>
 <div class="tracks">
     <p>tracks produced by me</p>
+    <button onclick="openLink3()">Vamos A La Playa - Euro5tar ft. Ntel22, prod. Josephpusher</button>
     <button onclick="openLink1()">Motherf#cker - BlingBianco, prod. Josephpusher</button>
     <button onclick="openLink2()">Push Push Push - BlingBianco, prod. Josephpusher</button>
-    <button onclick="openLink3()">Vamos A La Playa - Euro5tar ft. Ntel22, prod. Josephpusher</button>
+    <button onclick="openLink9()">Roccbottom - Ntel22 ft. Euro5tar & BlingBianco, prod. Josephpusher</button>
 </div>
 
 
@@ -168,8 +173,17 @@
         function openLink5() {
             window.location.href = 'Instrumental_2.html';
         }
+        function openLink4() {
+            window.location.href = 'Instrumental_1.html';
+        }
         function openLink6() {
             window.location.href = 'Instrumental_3.html';
+        }
+        function openLink7() {
+            window.location.href = 'Instrumental_4.html';
+        }
+        function openLink8() {
+            window.location.href = 'Instrumental_5.html';
         }
         function openLink1() {
         window.open("https://on.soundcloud.com/Q3L3Zn84maotkDnK8", "_blank");
@@ -179,6 +193,9 @@
          }
          function openLink3() {
         window.open("https://on.soundcloud.com/RWzYZp7ysW4nVqhL6", "_blank");
+         }
+         function openLink9() {
+        window.open("https://on.soundcloud.com/bhHQgSvcEFcYPZ3G6", "_blank");
          }
         function toggleMute() {
             var video = document.getElementById("background-video");
